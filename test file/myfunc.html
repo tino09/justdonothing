@@ -1,0 +1,38 @@
+<!Doctype html>
+
+<html>
+    <head>
+        <title>Functions</title>
+
+        <script>
+            function myFunction() {
+                document.getElementById('p').innerHTML=Date()
+            }
+        </script>
+    </head>
+    <body>
+        <p id="p"> it was tho</p>
+
+        <button type="button" onclick="myFunction()"> Click</button>
+
+        <p id="calc"> Answer </p>
+
+        <script>
+        var x,y,z;
+        x = 6;
+        y = 8;
+        z = x / y;
+
+        document.getElementById('calc').innerHTML = " The answer to this is " + z + '.';
+        
+        </script>
+        <br>
+
+        <p id="demo"> </p>
+        <script>
+        var str = "position of string";
+        var pos = str.indexOf('of');
+        document.getElementById('demo').innerHTML = pos;
+        </script>
+    </body>
+</html>
