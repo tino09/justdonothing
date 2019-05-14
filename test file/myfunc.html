@@ -34,5 +34,34 @@
         var pos = str.indexOf('of');
         document.getElementById('demo').innerHTML = pos;
         </script>
+
+        <br>
+        <p id="semo"></p>
+        <script>
+        var str = "how am i going about this";
+        var pos = str.search("about");
+        document.getElementById("semo").innerHTML = pos;
+        </script>
     </body>
+
+    <br>
+    <p id="nemo">All of a sudden i forget, that i was upset</p>
+    <button onclick="upperCase()">Click</button>
+    <script>
+    
+    
+
+        function upperCase(){
+    var txt = document.getElementById("nemo").innerHTML;
+    document.getElementById("nemo").innerHTML = txt.toUpperCase();
+        }
+    </script>
+
+    <br>
+    <p id="pena"></p>
+    <script>
+    var txt = "The somg go well";
+    document.getElementById("pena").innerHTML = txt.charAt(7);
+    </script>
+
 </html>
