@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <br>
+    <p id="peace"></p>
+    <script>
+    var d = new Date();
+    d.setFullYear(2020);
+    document.getElementById("peace").innerHTML = d;
+    </script>
+
+    <br>
+    <p id="walk"></p>
+    <script>
+    var today, someday, text;
+    today = new Date();
+    someday = new Date();
+    today.setFullYear(1994, 1, 15);
+    someday.setFullYear(2019, 4, 16);
+
+    if (today > someday) {
+        text = "I was born today";
+    }else{
+        text = "Today I'm a man";
+    }
+    document.getElementById("walk").innerHTML = text;
+    </script>
+
+</body>
+</html>
