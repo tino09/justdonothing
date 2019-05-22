@@ -1,0 +1,65 @@
+<!Doctype html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Multiple arrays</title>
+</head>
+<body>
+        <h1>converting a string into and Array</h1>
+    <p id="nemo"></p>
+    
+
+    <!-- converting a string into and Array -->
+    <script>
+    var txt = "a b n u i o p";
+    var pos = txt.split(" ");
+    document.getElementById("nemo").innerHTML = pos[3];
+    
+    </script>
+    <hr>
+
+    <p id="demo"></p>
+
+    <script>
+    var txt = "";
+    var numbers = [78, 2, 37, 92, 91, 1];
+    numbers.forEach(myFunction);
+    document.getElementById("demo").innerHTML = txt;
+
+    function myFunction(value, index, array){
+            txt = txt + value + "<br>";
+    }
+
+    </script>
+    <hr>
+    <p id="semo"></p>
+
+    <script>
+    var numbers1 =[1, 2, 3, 4, 5];
+    var numbers2 = numbers1.map(Sebago);
+
+    document.getElementById("semo").innerHTML = numbers2;
+
+    function Sebago(value, index, array){
+        return value * 2 ;
+    }
+    </script>
+
+    <hr>
+    <p>Creates a new array with all array elements that passes a test.</p>
+    <p id="teamo"></p>
+
+    <script>
+    var num1 = [10, 20, 30, 25, 18, 44, 1, 12, 9, 17, 19];
+    var num2 = num1.filter(myPhilly);
+        document.getElementById("teamo").innerHTML = num2;
+
+        function myPhilly(value, index, array){
+            return value > 18;
+        }
+    </script>
+</body>
+</html>
