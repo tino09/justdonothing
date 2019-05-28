@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Errors</title>
+</head>
+<body>
+
+    <p>Insert a number between 5 and 10</p>
+    <input id="demo" type="text">
+    <button onclick="myFunctions()">Check</button>
+
+    <p id="output"></p>
+
+    <script>
+    
+    
+    function myFunction() {
+        var x = document.getElementById("demo").value ;
+    txt = document.getElementById("output");
+    txt.innerHTML = "";
+
+    try {
+         if (x == "") throw "insert a figure valuettt";
+        if( x < 5) throw "Insert a Higher value";
+        if(x > 10) throw "Insert a Lower value";
+        if(isNaN(x)) throw "Insert a figure value";
+        x = Number(x);
+        if (x <= 10 ) throw "Correct";
+        if(x >= 5) throw "Correct";
+        }
+        catch (err){
+            txt.innerHTML = "Kindly " + err;
+        }
+    }
+
+    function myFunctions() {
+    var message, x;
+    message = document.getElementById("output");
+    message.innerHTML = "";
+    x = document.getElementById("demo").value;
+    try { 
+        if(x == "") throw "is empty";
+        if(isNaN(x)) throw "is not a number";
+        x = Number(x);
+        if(x > 10) throw "is too high";
+        if(x < 5) throw "is too low";
+    }
+    catch(err) {
+        message.innerHTML = "Error: " + err + ".";
+    }
+    finally {
+        document.getElementById("demo").value = "";
+    }
+}
+    </script>
+    
+</body>
+</html>
