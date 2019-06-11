@@ -25,3 +25,30 @@ function getFormattedNumber(num){
     return value;
 }
 
+function reverseNumberFormat (num) {
+        return Number(num.replace(/,/g, ""));
+    }
+    
+var operator = document.getElementsByClassName("operator");
+for(var i =0; i<operator.length; i++ ){
+    operator[i].addEventListener('click', function(){
+        if(this.id=="clear"){
+            printHistroy("");
+            printOutput("");
+        }
+        else if(this.id== "backspace"){
+
+        }
+    });
+}
+
+var numbers = document.getElementsByClassName("number");
+for(var i =0; i<numbers.length; i++ ){
+    numbers[i].addEventListener('click', function(){
+        var output = reverseNumberFormat(getOutput());
+        if (output != NaN){
+            output += output +this.id;
+            printOutput(output);
+        }
+    });
+}
