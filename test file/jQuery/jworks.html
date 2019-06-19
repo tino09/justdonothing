@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="jworks.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>domMap</title>
+</head>
+<body>
+    <h1>Well Spin</h1>
+    <p>Developed <a href="https://valentineayim.name.ng" target="blank">By Valentine</a></p>
+    <ul>
+        <li>Ferrari</li>
+        <li>Benz</li>
+        <li>BMW</li>
+    </ul>
+    <div class="flags">
+        <img src="flags/egypt.png" alt="egypt">
+        <img src="flags/naija.png" alt="naija">
+        <img src="flags/kenya.png" alt="kenya">
+
+    </div>
+
+   <button style="border: 2px dotted green">Change</button>
+   
+    <p id="ui">jquery tests lines...</p>
+
+    
+
+    <div id="div1" style="width:80px;height:80px;background-color:rgb(0, 255, 76); float: left; "></div><br>
+    <div id="div2" style="width:80px;height:80px;background-color:rgb(0, 255, 255); float: left; "></div><br>
+    <div id="div3" style="width:80px;height:80px;background-color:rgb(98, 0, 255); float: left; "></div><br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div id="flip">Click to slide down panel</div>
+    <div id="panel">Hello world!</div>
+
+    <script>
+    $("#ui").on({
+        mouseenter: function(){
+            $(this).css("background-color", "pink");
+        },
+        mouseleave: function(){
+            $(this).css("background-color", "brown");
+        },
+        click: function(){
+            $(this).css("background-color", "grey");
+        }
+    });
+
+    $(document).ready(function(){
+        $("button").click(function () {
+            $("#div1").fadeToggle();
+            $("#div2").fadeToggle("slow");
+            $("#div3").fadeToggle(4000);
+        });
+
+    });
+
+    $(document).ready(function(){
+        $("#flip").click(function(){
+            $("#panel").slideToggle("slow")
+        })
+    })
+
+    </script>
+   
+    
+    
+</body>
+</html>
