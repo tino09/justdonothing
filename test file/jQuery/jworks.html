@@ -18,11 +18,13 @@
         <li>Benz</li>
         <li>BMW</li>
     </ul>
+
     <div class="flags">
         <img src="flags/egypt.png" alt="egypt">
         <img src="flags/naija.png" alt="naija">
         <img src="flags/kenya.png" alt="kenya">
-
+        <div id="clark" style="width:100px; height:150px; background-color:teal;"></div>
+        <button>pull Up/Down</button>
     </div>
 
    <button style="border: 2px dotted green">Change</button>
@@ -40,7 +42,10 @@
     <br>
 
     <div id="flip">Click to slide down panel</div>
-    <div id="panel">Hello world!</div>
+    <div id="panel">Hello world!</div> <button id="stop">STOP</button>
+
+    <p>Start Typing</p>
+    <input id="peace" type="text">
 
     <script>
     $("#ui").on({
@@ -64,11 +69,38 @@
 
     });
 
+//slideToggle syntax $('#id').slideToggle()
     $(document).ready(function(){
         $("#flip").click(function(){
-            $("#panel").slideToggle("slow")
+            $("#panel").slideToggle(8000)
         })
-    })
+        $("#stop").click(function(){
+            $("#panel").stop()
+        });
+        
+    });
+
+// animate syntax $('#id').animate({})
+    $(document).ready(function(){
+        $("button").click(function(){
+            var clark = $("#clark");
+            clark.animate({heigth:'100px', opacity:0.4}, 'slow');
+            clark.animate({heigth:'200px', opacity:0.6}, 'slow');
+            clark.animate({heigth:'300px', opacity:0.8}, 'slow');
+            clark.animate({heigth:'400px', opacity:0.2}, 'slow');
+        });
+    });
+
+// stop() animation syntax
+//$(selector).stop(stopAll, goToEnd);
+
+
+//making function from the keypress event
+    $(document).ready(function(){
+        $("#peace").on("keypress", function(){
+            $("p:last").hide();
+        });
+    });
 
     </script>
    
